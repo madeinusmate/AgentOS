@@ -1,0 +1,12 @@
+{
+  "name": "agentos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render-prompts": "node scripts/render-prompts.mjs"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

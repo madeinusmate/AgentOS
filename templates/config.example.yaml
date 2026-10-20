@@ -1,0 +1,81 @@
+# Copy to config.yaml and fill in before running the spin-up prompts.
+# Replace every {{PLACEHOLDER}} in /prompts with values from this file.
+
+operator:
+  name: "Your Name"
+  timezone: "Asia/Singapore"
+  approval_rule: "Nothing goes out without my explicit yes — emails, buyer outreach, ad spend, bids, and code merges."
+
+router_bot:
+  name: "Jared" # your primary Grok bot / chief of staff
+  morning_briefing_time: "07:46"
+  app_standup_window: "17:54–18:04 weekdays"
+
+company:
+  legal_name: "MIU Digital Pte Ltd"
+  notion_workspace: "MIU Digital"
+  hq_group_chat: "#miu-hq"
+
+personal:
+  notion_workspace: "Your Name — Personal"
+  personal_group_chat: "#personal-ops"
+
+shared_box:
+  description: "One Linux machine all bots share for Cursor cloud agents, browsers, and API scripts"
+  repos: ["github.com/your-org/your-app"]
+
+notion:
+  team_wiki_parent: "Team Wikis & Decision Logs"
+  databases:
+    crm: "CRM"
+    projects: "Projects"
+    specs: "Specs / PRDs"
+
+connectors:
+  # List what you have wired into Grok / your environment
+  enabled:
+    - notion
+    - gmail
+    - google_calendar
+    - google_drive
+    - github
+    - vercel
+    - stripe
+    - shopify
+    - meta_ads
+    # add or remove as needed
+
+mobile_apps:
+  - slug: "chef-gpt"
+    display_name: "ChefGPT"
+    tagline: "AI calorie tracker"
+    group_chat: "#chef-gpt-all-hands"
+    repo: "github.com/your-org/chef-gpt"
+  - slug: "puff-pal"
+    display_name: "PuffPal"
+    tagline: "Quit vaping"
+    group_chat: "#puffpal-all-hands"
+    repo: "github.com/your-org/puffpal"
+  # duplicate the block per app; each app gets 7 standard roles (see mobile-app prompt)
+
+ecommerce:
+  brand_name: "EDO 1834"
+  shopify_store: "your-store.myshopify.com"
+  group_chat: "#edo-all-hands"
+
+saas:
+  product_name: "Rheo"
+  domain: "getrheo.io"
+  group_chat: "#rheo-all-hands"
+
+private_life_bots:
+  - career_manager
+  - finance_manager
+  - house_hunter
+  - travel_planner
+  - date_night_planner
+
+company_admin_bots:
+  - company_cfo
+  - viral_apps_scout
+  - funding_ma_advisor # rename to taste
